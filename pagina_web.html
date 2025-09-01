@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Recomendaciones Medio Ambiente</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: "Comic Sans MS", cursive, sans-serif;
+      background: linear-gradient(135deg, #a8edea, #fed6e3);
+      color: #333;
+    }
+
+    header {
+      background: linear-gradient(45deg, #56ab2f, #a8e063);
+      padding: 20px;
+      text-align: center;
+      color: white;
+      font-size: 1.8em;
+      font-weight: bold;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    }
+
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      padding: 20px;
+      gap: 20px;
+    }
+
+    .left, .right {
+      flex: 1 1 100%;
+      background: #ffffffcc;
+      border-radius: 15px;
+      padding: 20px;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+    }
+
+    /* Para pantallas grandes: dos columnas */
+    @media (min-width: 768px) {
+      .left { flex: 2; }
+      .right { flex: 1; }
+    }
+
+    h2 {
+      color: #2d6a4f;
+      margin-bottom: 15px;
+      text-align: center;
+    }
+
+    .recomendacion {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .recomendacion img {
+      width: 80px;
+      height: 80px;
+      object-fit: contain;
+      margin-bottom: 8px;
+    }
+
+    .recomendacion p {
+      font-size: 1.1em;
+      font-weight: bold;
+      color: #1d3557;
+    }
+
+    textarea {
+      width: 100%;
+      min-height: 80px;
+      border-radius: 10px;
+      border: 2px solid #2d6a4f;
+      padding: 10px;
+      font-size: 1em;
+      resize: none;
+    }
+
+    button {
+      margin-top: 10px;
+      padding: 12px 20px;
+      background: linear-gradient(45deg, #06beb6, #48b1bf);
+      border: none;
+      border-radius: 10px;
+      color: white;
+      font-size: 1.1em;
+      cursor: pointer;
+      transition: transform 0.2s;
+      width: 100%;
+    }
+
+    button:hover {
+      transform: scale(1.05);
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    li {
+      background: #e9f5db;
+      margin: 8px 0;
+      padding: 8px;
+      border-radius: 8px;
+      font-size: 0.95em;
+      color: #333;
+    }
+
+    footer {
+      margin-top: 20px;
+      padding: 15px;
+      text-align: center;
+      font-size: 0.9em;
+      background: #2d6a4f;
+      color: white;
+      border-top: 5px solid #95d5b2;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    🌍 Recomendaciones para Cuidar el Medio Ambiente – 4to grado Colegio Paulo V 🌱
+  </header>
+
+  <div class="container">
+    <!-- Columna izquierda -->
+    <div class="left">
+      <h2>✅ Nuestras Recomendaciones</h2>
+
+      <div class="recomendacion">
+        <img src="https://cdn-icons-png.flaticon.com/512/415/415733.png" alt="Agua">
+        <p>Ahorrar agua</p>
+      </div>
+
+      <div class="recomendacion">
+        <img src="https://cdn-icons-png.flaticon.com/512/1048/1048941.png" alt="Reciclar">
+        <p>Reciclar</p>
+      </div>
+
+      <div class="recomendacion">
+        <img src="https://cdn-icons-png.flaticon.com/512/766/766149.png" alt="Árbol">
+        <p>Plantar árboles</p>
+      </div>
+
+      <div class="recomendacion">
+        <img src="https://cdn-icons-png.flaticon.com/512/616/616408.png" alt="Animales">
+        <p>Cuidar a los animales</p>
+      </div>
+
+      <div class="recomendacion">
+        <img src="https://cdn-icons-png.flaticon.com/512/2907/2907446.png" alt="Basura">
+        <p>No botar basura</p>
+      </div>
+    </div>
+
+    <!-- Columna derecha -->
+    <div class="right">
+      <h2>💡 Comparte tus ideas</h2>
+      <textarea id="comentario" placeholder="Escribe aquí tu idea..."></textarea>
+      <br>
+      <button onclick="agregarComentario()">Enviar</button>
+
+      <h3>📝 Comentarios:</h3>
+      <ul id="lista-comentarios"></ul>
+    </div>
+  </div>
+
+  <footer>
+    🌟 Esta página fue creada fácilmente con ChatGPT. ¡Así de sencillo es compartir ideas con el mundo! 🌟
+  </footer>
+
+  <script>
+    function agregarComentario() {
+      const input = document.getElementById("comentario");
+      const texto = input.value.trim();
+      if (texto !== "") {
+        const lista = document.getElementById("lista-comentarios");
+        const nuevo = document.createElement("li");
+        nuevo.textContent = texto;
+        lista.appendChild(nuevo);
+        input.value = "";
+      }
+    }
+  </script>
+</body>
+</html>

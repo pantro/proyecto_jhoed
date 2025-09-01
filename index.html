@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Proyecto Medio Ambiente 🌍</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: "Arial", sans-serif;
+      text-align: center;
+      background: linear-gradient(135deg, #00c6ff, #0072ff);
+      color: white;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      animation: backgroundShift 10s infinite alternate;
+    }
+
+    @keyframes backgroundShift {
+      0% { background: linear-gradient(135deg, #ff9a9e, #fad0c4); }
+      50% { background: linear-gradient(135deg, #a18cd1, #fbc2eb); }
+      100% { background: linear-gradient(135deg, #00c6ff, #0072ff); }
+    }
+
+    h1 {
+      font-size: 2.2em;
+      margin: 20px;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    }
+
+    p {
+      font-size: 1.1em;
+      margin: 15px;
+      max-width: 600px;
+    }
+
+    .botones {
+      display: flex;
+      gap: 15px;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 10px;
+      width: 100%;
+      max-width: 500px;
+    }
+
+    button {
+      flex: 1 1 200px;
+      padding: 15px 20px;
+      font-size: 1.1em;
+      border: none;
+      border-radius: 12px;
+      cursor: pointer;
+      transition: transform 0.3s, box-shadow 0.3s;
+      font-weight: bold;
+      color: white;
+    }
+
+    button:hover {
+      transform: scale(1.05);
+      box-shadow: 0px 6px 15px rgba(0,0,0,0.3);
+    }
+
+    #btn-pagina {
+      background: linear-gradient(45deg, #ff6a00, #ee0979);
+    }
+
+    #btn-pdf {
+      background: linear-gradient(45deg, #36d1dc, #5b86e5);
+    }
+
+    footer {
+      margin-top: 20px;
+      padding: 10px;
+      font-size: 0.9em;
+      opacity: 0.9;
+    }
+
+    /* Ajustes extra para celulares */
+    @media (max-width: 480px) {
+      h1 {
+        font-size: 1.8em;
+      }
+      p {
+        font-size: 1em;
+      }
+      button {
+        font-size: 1em;
+        padding: 12px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1>🌍 Proyecto: Cuidemos el planeta con ChatGPT🌱</h1>
+  <p>Explora nuestro proyecto con una página web educativa y un tríptico interactivo.</p>
+
+  <div class="botones">
+    <button id="btn-pagina">🌐 Ver Página Web</button>
+    <button id="btn-pdf">📄 Ver Tríptico en PDF</button>
+  </div>
+
+  <footer>
+    Hecho por Jhoed Steve Condori Catunta de 4to grado de primaria del colegio Paulo VI - Arequipa - Perú✨
+  </footer>
+
+  <script>
+    document.getElementById("btn-pagina").onclick = function() {
+      window.location.href = "pagina_web.html"; // archivo local
+    };
+
+    document.getElementById("btn-pdf").onclick = function() {
+      window.open("triptico.pdf", "_blank"); // archivo PDF en el repo
+    };
+  </script>
+</body>
+</html>
+
